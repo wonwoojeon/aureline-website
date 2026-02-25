@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 
 import { NoiseOverlay } from './components/layout/NoiseOverlay';
@@ -10,8 +10,10 @@ import { Features } from './components/sections/Features';
 import { Philosophy } from './components/sections/Philosophy';
 import { Method } from './components/sections/Method';
 import { Collection } from './components/sections/Collection';
+import { ShopModal } from './components/sections/ShopModal';
 
 function App() {
+  const [isShopOpen, setShopOpen] = useState(false);
   // Smooth Scrolling setup using Lenis (commonly used with GSAP)
   useEffect(() => {
     const lenis = new Lenis({
@@ -39,7 +41,8 @@ function App() {
   return (
     <div className="bg-ivory text-moss font-sans selection:bg-gold/30">
       <NoiseOverlay />
-      <Navbar />
+      <Navbar onOpenShop={() => setShopOpen(true)} />
+      <ShopModal isOpen={isShopOpen} onClose={() => setShopOpen(false)} />
 
       <main>
         <Hero />

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { cn } from '../../utils/cn';
 
-export function Navbar() {
+export function Navbar({ onOpenShop }: { onOpenShop?: () => void }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const navRef = useRef<HTMLElement>(null);
 
@@ -50,7 +50,10 @@ export function Navbar() {
                     <a href="#atelier" className="hover:text-gold transition-colors">Atelier</a>
                 </div>
 
-                <button className="text-sm uppercase tracking-widest border border-moss/20 px-4 py-2 rounded-full hover:bg-moss hover:text-ivory transition-all duration-300">
+                <button
+                    onClick={onOpenShop}
+                    className="text-sm uppercase tracking-widest border border-moss/20 px-4 py-2 rounded-full hover:bg-moss hover:text-ivory transition-all duration-300"
+                >
                     Shop
                 </button>
             </nav>
