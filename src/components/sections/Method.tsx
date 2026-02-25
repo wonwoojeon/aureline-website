@@ -10,19 +10,22 @@ const steps = [
         title: "Botanical Extraction",
         korTitle: "식물성 추출",
         desc: "엄선된 한국의 희귀 식물에서 고순도 활성 성분을 추출합니다.",
-        img: "https://images.unsplash.com/photo-1595981267035-7b04d84b4f1c?q=80&w=2670&auto=format&fit=crop",
+        mediaType: "video",
+        mediaSrc: "/ad_contents/Mung_bean_Mask.mp4",
     },
     {
         title: "Clinical Precision",
         korTitle: "임상적 정밀함",
         desc: "피부 장벽 깊숙이 유효 성분을 전달하는 마이크로 테크놀로지.",
-        img: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=2600&auto=format&fit=crop",
+        mediaType: "image",
+        mediaSrc: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=2600&auto=format&fit=crop",
     },
     {
         title: "Ritual Application",
         korTitle: "리추얼 어플리케이션",
         desc: "손끝에서 피어나는 온기와 향기로 완성되는 하루의 결실.",
-        img: "https://images.unsplash.com/photo-1542272454-fa9ba1c9c7e0?q=80&w=2574&auto=format&fit=crop",
+        mediaType: "image",
+        mediaSrc: "https://images.unsplash.com/photo-1542272454-fa9ba1c9c7e0?q=80&w=2574&auto=format&fit=crop",
     },
 ];
 
@@ -90,12 +93,23 @@ export function Method() {
                         )}
                     >
                         {/* Image Side */}
-                        <div className="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-[2s] hover:scale-110"
-                                style={{ backgroundImage: `url(${step.img})` }}
-                            />
-                            <div className="absolute inset-0 bg-black/20 mix-blend-multiply" />
+                        <div className="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden bg-[#1F2A24]">
+                            {step.mediaType === 'video' ? (
+                                <video
+                                    src={step.mediaSrc}
+                                    muted
+                                    loop
+                                    autoPlay
+                                    playsInline
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] hover:scale-110"
+                                />
+                            ) : (
+                                <div
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-[2s] hover:scale-110"
+                                    style={{ backgroundImage: `url(${step.mediaSrc})` }}
+                                />
+                            )}
+                            <div className="absolute inset-0 bg-black/20 mix-blend-multiply pointer-events-none" />
                         </div>
 
                         {/* Content Side */}

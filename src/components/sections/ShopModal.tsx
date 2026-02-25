@@ -74,7 +74,7 @@ export function ShopModal({ isOpen, onClose }: ShopModalProps) {
                 <video
                     ref={videoRef}
                     src="/ad_contents/Beyond_Time.mp4"
-                    muted
+                    muted={false}
                     loop
                     playsInline
                     className="w-full h-full object-cover opacity-60"
