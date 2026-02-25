@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-moss: #1F2A24;
+  --color-gold: #C6A756;
+  --color-ivory: #F6F1E8;
+  --color-graphite: #2B2B2B;
+
+  --font-sans: 'Outfit', 'Noto Sans KR', sans-serif;
+  --font-serif: 'Playfair Display', 'Nanum Myeongjo', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+:root {
+  font-family: var(--font-sans);
+  background-color: var(--color-ivory);
+  color: var(--color-moss);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Base typography for drama serifs */
+.font-drama {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar to match aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-moss);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4b86a;
+}
