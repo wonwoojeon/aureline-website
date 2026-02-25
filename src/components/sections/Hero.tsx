@@ -62,7 +62,7 @@ export function Hero() {
             <div
                 className="hero-bg absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
                 style={{
-                    backgroundImage: 'url("/aureline_hero_product_2.png")',
+                    backgroundImage: 'url("/Main_image01.png")',
                 }}
             >
                 <div className="absolute inset-0 bg-gradient-to-t from-moss/60 via-moss/20 to-transparent mix-blend-multiply" />
