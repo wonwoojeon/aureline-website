@@ -18,14 +18,14 @@ const steps = [
         korTitle: "임상적 정밀함",
         desc: "피부 장벽 깊숙이 유효 성분을 전달하는 마이크로 테크놀로지.",
         mediaType: "image",
-        mediaSrc: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=2600&auto=format&fit=crop",
+        mediaSrc: "/method_phase2.png",
     },
     {
         title: "Ritual Application",
         korTitle: "리추얼 어플리케이션",
         desc: "손끝에서 피어나는 온기와 향기로 완성되는 하루의 결실.",
         mediaType: "image",
-        mediaSrc: "https://images.unsplash.com/photo-1542272454-fa9ba1c9c7e0?q=80&w=2574&auto=format&fit=crop",
+        mediaSrc: "/method_phase3.png",
     },
 ];
 
